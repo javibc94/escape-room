@@ -1,0 +1,27 @@
+<form name="personalDataForm" novalidate>
+	<div class="form-group">
+		<div class="row">
+			<div class="col-xs-12" align="center"><h3>Personal data</h3></div>
+		</div>
+		<label class="col-sm-2 control-label" for="formGroup">Name *</label>
+		<div class="col-sm-4">
+			<input class="form-control" type="text" ng-model="reservation.name" ng-pattern="/[A-Z][A-Za-z]/" required />
+		</div>
+		<label class="col-sm-2 control-label" for="formGroup">Last name *</label>
+		<div class="col-sm-4">
+			<input class="form-control" type="text"  required />
+		</div>
+		<label class="col-sm-2 control-label" for="formGroup">Email *</label>
+		<div class="col-sm-4">
+			<input class="form-control" type="text" required />
+		</div>
+		<label class="col-sm-2 control-label" for="formGroup">Phone *</label>
+		<div class="col-sm-4">
+			<input class="form-control" type="text" />
+		</div>
+		<label class="col-sm-2 control-label" for="formGroup">DNI *</label>
+		<div class="col-sm-4">
+			<input class="form-control" type="text" requeired />
+		</div>
+	</div>
+</form>
