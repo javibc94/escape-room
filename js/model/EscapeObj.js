@@ -6,19 +6,19 @@ function reservationObj ()
 	this.numOfAdults;
 	this.numOfChildren;
 	this.specialRequests = new Array();
-	this.totalPrice;
+	this.PriceForPerson;
 
 
 
 	//Methods declaration
-	this.construct = function (id,name,surname,firstAddress,secondAddress, city, state, postalCode, numOfAdults, numOfChildren, phone, email, roomPreference, checkInDate, checkOutDate, checkInTime, checkOutTime, specialRequests, specialInstructions, totalPrice)
+	this.construct = function (id,name,surname,firstAddress,secondAddress, city, state, postalCode, numOfAdults, numOfChildren, phone, email, roomPreference, checkInDate, checkOutDate, checkInTime, checkOutTime, specialRequests, specialInstructions, PriceForPerson)
 	{
 		this.setName(name);
 		this.setType(type);
 		this.setNumOfAdults(numOfAdults);
 		this.setNumOfChildren(numOfChildren);
 		this.setSpecialRequests(specialRequests);
-		this.setTotalPrice(totalPrice);
+		this.setPriceForPerson(PriceForPerson);
 
 	}
 
@@ -27,7 +27,7 @@ function reservationObj ()
 	this.setNumOfAdults = function (numOfAdults){this.numOfAdults=numOfAdults;}
 	this.setNumOfChildren = function (numOfChildren){this.numOfChildren=numOfChildren;}
 	this.setSpecialRequests = function (specialRequests){this.specialRequests=specialRequests;}
-	this.setTotalPrice = function (totalPrice){this.totalPrice=totalPrice;}
+	this.setPriceForPerson = function (Price){this.PriceForPerson=Price;}
 
 	this.addSpecialRequests = function (specialreq)
 	{
@@ -52,7 +52,7 @@ function reservationObj ()
 	this.getNumOfAdults = function () {return this.numOfAdults;}
 	this.getNumOfChildren = function () {return this.numOfChildren;}
 	this.getSpecialRequests = function () {return this.specialRequests;}
-	this.getTotalPrice = function () {return this.totalPrice;}
+	this.getPriceForPerson = function () {return this.PriceForPerson;}
 
 	this.validate = function ()
 	{
@@ -88,7 +88,7 @@ function reservationObj ()
 		reservationString +=" ADULTS="+this.getNumOfAdults();
 		reservationString +=" CHILDREN="+this.getNumOfChildren();
 		reservationString +=" SPECIAL INS="+this.getSpecialInstructions();
-		reservationString +=" TOTAL PRICE="+this.getTotalPrice();
+		reservationString +=" TOTAL PRICE="+this.getPriceForPerson();
 		return reservationString;
 	}
 }
