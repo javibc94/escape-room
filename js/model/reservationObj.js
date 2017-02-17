@@ -1,26 +1,17 @@
 /* @reservationObj()
-* @author: Irene Blanco Fabregat
-* @date: 02/02/2015
-* @description: Object review
+* @author: Xavier Pérez Grau
+* @date: 17/02/2017
+* @description: Object reservation
 * @Attributes:
 * 		id: id for the reservation
-name: first name for the reservation
-surname: last name for the reservation
-firstAddress;
-secondAddress;
-city;
-state;
-postalCode;
+User: object user who makes the reservation
 numOfAdults;
 numOfChildren;
-phone;
-email;
-roomPreference;
 checkInDate;
 checkOutDate;
 checkInTime;
 checkOutTime;
-specialInstructions;
+specialRequirements;
 totalPrice;
 * @methods:
 * 		construct
