@@ -23,42 +23,23 @@ totalPrice;
 function reservationObj ()
 {
 	//Attributes declaration
-	this.id;
-	this.user;//userObj
-	this.nameOfEscape;//name of escape reserved
-	this.numOfAdults;//valor del selection hecho con el EscapeObj
-	this.numOfChildren;//valor del selection hecho con el EscapeObj
 	this.checkInDate;//date
-	this.checkOutDate;
 	this.checkInTime;
-	this.checkOutTime;
-	this.specialRequests = new Array();
-	this.totalPrice;//price for person * persons selected
-
-
+	this.nPlayers;
+	this.type;
+	this.totalPrice;
 
 	//Methods declaration
-	this.construct = function (id,name,surname,firstAddress,secondAddress, city, state, postalCode, numOfAdults, numOfChildren, phone, email, roomPreference, checkInDate, checkOutDate, checkInTime, checkOutTime, specialRequests, specialInstructions, totalPrice)
+	this.construct = function (checkInDate, checkInTime, nPlayers, type, totalPrice)
 	{
-		this.setId(id);
-		this.setUser(user);
-		this.setNameOfEscape(nameOfEscape);
-		this.setNumOfAdults(numOfAdults);
-		this.setNumOfChildren(numOfChildren);
 		this.setCheckInDate(checkInDate);
-		this.setCheckOutDate(checkOutDate);
 		this.setCheckInTime(checkInTime);
-		this.setCheckOutTime(checkOutTime);
-		this.setSpecialRequests(specialRequests);
+		this.setNPlayers(nPlayers);
+		this.setType(type);
 		this.setTotalPrice(totalPrice);
 
 	}
 
-	this.setId = function (id){this.id=id;}
-	this.setUser = function (user){this.user=user;}
-	this.setNameOfEscape = function (nameOfEscape){this.nameOfEscape=nameOfEscape;}
-	this.setNumOfAdults = function (numOfAdults){this.numOfAdults=numOfAdults;}
-	this.setNumOfChildren = function (numOfChildren){this.numOfChildren=numOfChildren;}
 	this.setCheckInDate = function (checkInDate){this.checkInDate=checkInDate;}
 	this.setCheckOutDate = function (checkOutDate){this.checkOutDate=checkOutDate;}
 	this.setCheckInTime = function (checkInTime){this.checkInTime=checkInTime;}

@@ -9,11 +9,11 @@ function userObj ()
 
 	//Methods declaration
 	this.construct = function (name, lastName, email, phone, dni) {
-		this.name = name;
-    this.lastName = lastName;
-    this.email = email;
-    this.phone = phone;
-    this.dni = dni;
+		this.setName(name);
+    this.setLastName(lastName);
+    this.setEmail(email);
+    this.setPhone(phone);
+    this.setDni(dni);
 	}
 
 	this.setName = function (name){this.name=name;}

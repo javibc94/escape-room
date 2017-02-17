@@ -1,0 +1,65 @@
+<form class="login2" name="reservationForm" ng-submit="reservationForm.$valid && hotelResCtrl.submit()" novalidate>
+	<div class="form-group">
+		<div class="row">
+			<div class="col-xs-12" align="center"><h3>Reservation details</h3></div>
+		</div>
+		<label class="col-sm-2 control-label" for="formGroup">Check in Date *:</label>
+		<div class="col-sm-6">
+			<p class="input-group">
+				<input type="text"
+				class="form-control"
+				id="checkInDate"
+				uib-datepicker-popup="{{format}}"
+				is-open="checkInDate.opened"
+				datepicker-options="dateOptions"
+				close-text="Close"
+				alt-input-formats="altInputFormats"
+				readonly/>
+				<span class="input-group-btn">
+					<button type="button" class="btn btn-default"><i class="glyphicon glyphicon-calendar"></i></button>
+				</span>
+			</p>
+		</div>
+		<label class="col-sm-2 control-label" for="formGroup">Check in time: </label>
+		<div class="col-sm-2">
+			<select class="form-control" name="checkInTime" id="checkInTime" id="checkInTime" required>
+
+			</select>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-sm-2 control-label" for="formGroup">Players *</label>
+		<div class="col-sm-4">
+			<select class="form-control" id="numOfAdults" required>
+			</select>
+		</div>
+		<label class="col-sm-2 control-label" for="formGroup">Room type *</label>
+		<div class="col-sm-4">
+			<select class="form-control" name="roomType" id="roomType" required>
+
+			</select>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label" for="formGroup">Total price:</label>
+		<div class="col-sm-4">
+			<input class="form-control" type="text" ng-model="reservation.totalPrice" readonly/>
+		</div>
+	</div>
+	<br/>
+	<br/>
+	<div class="form-group">
+		<label class="col-sm-2 control-label" for="formGroup"></label>
+		<div class="col-sm-4">
+			<button class="btn btn-success" ng-disabled="reservationManagement.$invalid">
+				Submit
+			</button>
+		</div>
+		<div class="form-group col-sm-6">
+			<label>
+				<input class="btn btn-default btn-primary btn-block" type="button" value="Back" >
+			</label>
+		</div>
+	</div>
+</form>
