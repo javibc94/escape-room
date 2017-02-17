@@ -31,12 +31,16 @@
   <!-- Controllers-->
   <script src="js/app.js" type="text/javascript" xml:space="preserve"></script>
   <script src="js/controller/generalFunctions.js" type="text/javascript" xml:space="preserve"></script>
-  <script src="js/controller/hotelReservationController.js" type="text/javascript" xml:space="preserve"></script>
+  <script src="js/controller/mainController.js" type="text/javascript" xml:space="preserve"></script>
+  <script src="js/controller/personalDataController.js" type="text/javascript" xml:space="preserve"></script>
+  <script src="js/controller/roomReservationController.js" type="text/javascript" xml:space="preserve"></script>
+  <script src="js/controller/paymentController.js" type="text/javascript" xml:space="preserve"></script>
+  <script src="js/controller/createRoomController.js" type="text/javascript" xml:space="preserve"></script>
 </head>
 <body class="container">
-  <div class="imageDiv">
+  <!--<div class="imageDiv">
     <img src="images/hotel.jpg" id='logo' width="300" height="240" /></br>
-  </div>
+  </div>-->
   <div id="mainMenu" class="container well" ng-controller="hotelReservationController as hotelResCtrl">
     <h1>Welcome to the Escapes from the class</h1>
     <div id="mainOptions" class="form-horizontal">
@@ -44,12 +48,17 @@
       <span>  --  </span>
       <a href="#" ng-click="showAction=2">Create your own room escape</a>
     </div>
-    <div id="reservation" class="form-horizontal" ng-show="showAction==1">
-      <hotel-reservation-form></hotel-reservation-form>
+    <div id="personal" class="form-horizontal" ng-show="showAction==1">
+      <personal-data-form></personal-data-form>
     </div>
-
-    <div id="reviews" class="form-horizontal" ng-show="showAction==2">
-      <hotel-reviews-form></hotel-reviews-form>
+    <div id="reservation" class="form-horizontal" ng-show="showAction==1">
+      <room-reservation-form></room-reservation-form>
+    </div>
+    <div id="payment" class="form-horizontal" ng-show="showAction==1">
+      <room-reservation-form></room-reservation-form>
+    </div>
+    <div id="create" class="form-horizontal" ng-show="showAction==2">
+      <create-room-form></create-room-form>
     </div>
   </div>
   <br/><br/><br/>
