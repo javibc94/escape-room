@@ -1,4 +1,4 @@
-function reservationObj ()
+function EscapeObj ()
 {
 	//Attributes declaration
 	this.name;
@@ -84,11 +84,11 @@ function reservationObj ()
 	}
 
 	this.toString = function (){
-		var reservationString ="RESERVATION - FIRST NAME="+this.getName()+" TYPE="+this.getType();
-		reservationString +=" ADULTS="+this.getNumOfAdults();
-		reservationString +=" CHILDREN="+this.getNumOfChildren();
+		var reservationString ="ESCAPE ROOM - NAME="+this.getName()+" TYPE="+this.getType();
+		reservationString +=" MAX ADULTS="+this.getNumOfAdults();
+		reservationString +=" MAX CHILDREN="+this.getNumOfChildren();
 		reservationString +=" SPECIAL INS="+this.getSpecialInstructions();
-		reservationString +=" TOTAL PRICE="+this.getPriceForPerson();
+		reservationString +=" PRICE FOR PERSON="+this.getPriceForPerson();
 		return reservationString;
 	}
 }
