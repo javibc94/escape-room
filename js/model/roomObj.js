@@ -1,4 +1,4 @@
-function EscapeObj ()
+function roomObj ()
 {
 	//Attributes declaration
 	this.name;
