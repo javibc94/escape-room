@@ -16,7 +16,12 @@ $(document).ready(function () {
 		this.submit = function() {
 			//$scope.user.$setPristine();
       //launches the popup with the bill
-			$scope.$parent.showAction = 3;
+			//$scope.$parent.showAction = 3;
+			this.doPopUp();
+		};
+		
+		this.doPopUp = function() {
+			//this method shows the popup with payment information	
 		};
 
 
