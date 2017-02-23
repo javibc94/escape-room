@@ -16,31 +16,41 @@
  * 		toString(): transforms an object to well formated string with the attributes
  *
 */
-function reviewObj ()
+function PaymentObj ()
 {
 	//Attributes declaration
 	this.id;
-	this.rate;
-	this.opinion;
-	this.email;
+	this.price;
+	this.payMethod;
+	this.creditCard;
+	this.iban;
+	this.charity;
 
 
 	//Methods declaration
-	this.construct = function (id,price,payMethod)
+	this.construct = function (id,price,payMethod,creditCard,iban,charity)
 	{
 		this.setId(id);
-		this.setPrice(rate);
+		this.setPrice(price);
 		this.setPayMethod(payMethod);
+		this.setIban(iban);
+		this.setCharity(charity);
 	}
 
 	this.setId = function (id){this.id=id;}
 	this.setPrice = function (price){this.price=price;}
-	this.setOpinion = function (opinion){this.payMethod=payMethod;}
+	this.setPayMethod = function (payMethod){this.payMethod=payMethod;}
+	this.setCreditCard = function (creditCard){this.creditCard=creditCard;}
+	this.setIban = function (iban){this.iban=iban;}
+	this.setCharity = function (charity){this.charity=charity;}
 
 
 	this.getId = function () {return this.id;}
 	this.getPrice = function () {return this.price;}
 	this.getPayMethod = function () {return this.payMethod;}
+	this.getCreditCard = function(){return this.creditCard;}
+	this.getIban = function(){return this.iban;}
+	this.getCharity = function(){return this.charity;}
 
 
 	this.toString = function ()

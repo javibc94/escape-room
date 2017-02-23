@@ -5,20 +5,17 @@ $(document).ready(function () {
 
 //Angular code
 (function (){
-	angular.module('REApp').controller('RoomEscapeReservationController', ['$scope', '$window', function($scope, $window) {
+	angular.module('REApp').controller('roomReservationController', ['$scope', '$window', function($scope, $window) {
 		//Properties
     //$scope.reservation --> la variable creada por el form
 		$scope.reservation = new reservationObj();
 
 		$scope.reservation.setCheckInDate(new Date());
-		$scope.reservation.setCheckOutDate((new Date()).setDate((new Date()).getDate()+1));
 
 
 		//Scope variables
 		$scope.showAction;
-		$scope.specialRequests=["Plus time", "Snack after Escape Room", "Soundtrack to go"];
 		$scope.checkInTime = ["00:00", "01:00","02:00"];
-		$scope.checkOutTime = ["00:00", "01:00","02:00"];
 
 		//Date pickers scope variables and functions
 		$scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
@@ -35,45 +32,28 @@ $(document).ready(function () {
 			opened: false
 		};
 
-		$scope.checkOutDate = {
-			opened: false
-		};
 		$scope.openCheckInDate = function() {
 			$scope.checkInDate.opened = true;
-		};
-
-		$scope.openCheckOutDate = function() {
-			$scope.checkOutDate.opened = true;
 		};
 
 		this.submit = function() {
 			console.log($scope.reservation);
 		};
 
-		$scope.openCheckOutDate= function (){
-			$scope.checkOutDate.opened=true;
-		};
 		$scope.openCheckInDate= function (){
 			$scope.checkInDate.opened=true;
 		};
-		$scope.validateDates = function (){
-			if($scope.reservation.getCheckOutDate() <= $scope.reservation.getCheckInDate()){
 
-			}
-			else{
-
-			}
-		}
 	}]);
 
-	angular.module('REApp').directive("hotelReservationForm", function (){
+	angular.module('REApp').directive("roomReservationForm", function (){
 		return {
 			restrict: 'E',
-			templateUrl:"view/templates/hotel-reservation-form.html",
+			templateUrl:"view/templates/room-reservation-form.html",
 			controller:function(){
 
 			},
-			controllerAs: 'hotelReservationForm'
+			controllerAs: 'roomReservationForm'
 		};
 	});
 })();
