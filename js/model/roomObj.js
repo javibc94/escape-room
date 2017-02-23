@@ -3,6 +3,7 @@ function roomObj ()
 	//Attributes declaration
 	this.name;
 	this.type;
+	this.description;
 	this.numOfAdults;
 	this.numOfChildren;
 	this.specialRequests = new Array();
@@ -11,10 +12,11 @@ function roomObj ()
 
 
 	//Methods declaration
-	this.construct = function (id,name,surname,firstAddress,secondAddress, city, state, postalCode, numOfAdults, numOfChildren, phone, email, roomPreference, checkInDate, checkOutDate, checkInTime, checkOutTime, specialRequests, specialInstructions, PriceForPerson)
+	this.construct = function (name,type,desc,numOfAdults, numOfChildren, specialRequests, PriceForPerson)
 	{
 		this.setName(name);
 		this.setType(type);
+		this.setDescpription(desc);
 		this.setNumOfAdults(numOfAdults);
 		this.setNumOfChildren(numOfChildren);
 		this.setSpecialRequests(specialRequests);
@@ -24,6 +26,7 @@ function roomObj ()
 
 	this.setName = function (name){this.name=name;}
 	this.setType = function (type){this.type=type;}
+	this.setDescpription = function(desc){this.description=desc;}
 	this.setNumOfAdults = function (numOfAdults){this.numOfAdults=numOfAdults;}
 	this.setNumOfChildren = function (numOfChildren){this.numOfChildren=numOfChildren;}
 	this.setSpecialRequests = function (specialRequests){this.specialRequests=specialRequests;}
@@ -49,6 +52,7 @@ function roomObj ()
 
 	this.getName = function () {return this.name;}
 	this.getType = function () {return this.surname;}
+	this.getDescription = function(){return this.description;}
 	this.getNumOfAdults = function () {return this.numOfAdults;}
 	this.getNumOfChildren = function () {return this.numOfChildren;}
 	this.getSpecialRequests = function () {return this.specialRequests;}
