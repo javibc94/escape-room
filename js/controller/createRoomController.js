@@ -7,6 +7,7 @@ $(document).ready(function () {
 (function (){
 	angular.module('REApp').controller('createRoomController', ['$scope', '$window', function($scope, $window) {
 		//Properties
+		//the created room in this controller
 		$scope.room = new roomObj();
 
 
@@ -17,6 +18,9 @@ $(document).ready(function () {
 			//$scope.user.$setPristine();
 			$scope.$parent.showAction = 2;
 		};
+		this.create = function(){
+			$scope.$parent.rooms.push($scope.room);
+		}
 
 
 	}]);
