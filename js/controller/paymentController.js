@@ -7,7 +7,7 @@ $(document).ready(function () {
 (function (){
 	angular.module('REApp').controller('paymentController', ['$scope', '$window', function($scope, $window) {
 		//Properties
-		$scope.user = new paymentObj();
+		$scope.pay = new paymentObj();
 
 
 		//Scope variables
@@ -19,10 +19,11 @@ $(document).ready(function () {
 			//$scope.$parent.showAction = 3;
 			this.doPopUp();
 		};
-		
-		this.doPopUp = function() {
-			//this method shows the popup with payment information	
-		};
+
+		this.doPopUp = function(){
+			alert("Estas pagando!");
+			$scope.$parent.showAction=0;
+		}
 
 
 	}]);
