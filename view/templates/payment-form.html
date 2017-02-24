@@ -19,10 +19,10 @@
 			</div>
 		</div>
 		<div ng-show="pay.payMethod=='transfer'">
-			<label class="col-sm-2 control-label" for="formGroup">Card number *</label>
+			<label class="col-sm-2 control-label" for="formGroup">IBAN number *</label>
 			<div class="col-sm-4">
 				<!--The iban number-->
-				<input class="form-control" type="text" ng-model="pay.iban" required ng-pattern="/\d{4}-\d{4}-\d{4}-\d{4}/"/>
+				<input class="form-control" type="text" ng-model="pay.iban" required ng-pattern="/^[A-Z]{2}\d{2} \d{4} \d{4} \d{4} \d{4}/"/>
 			</div>
 		</div>
 		<label class="col-sm-2 control-label" for="formGroup">Charity (2€)</label>
